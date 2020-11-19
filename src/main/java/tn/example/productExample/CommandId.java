@@ -12,9 +12,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
-public class CommandId implements Serializable  {
+public class CommandId implements Serializable {
     @Column(name ="product_id")
     private Long idProduct;
     @ Column(name ="custommer_id")
     private Long idCustomer;
 }
+
+//Student st=new Student();--->st sera créé dans La RAM

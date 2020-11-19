@@ -23,6 +23,6 @@ public class Product {
     private double price;
     @NonNull
     private int stock;
-    @OneToMany(mappedBy = "prod",cascade=CascadeType.ALL)
-    private Set<Command> commandes=new HashSet<>();
+    @OneToMany(mappedBy="prod")
+    private Set<Command> commands=new HashSet<>();
 }

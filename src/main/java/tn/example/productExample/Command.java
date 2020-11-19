@@ -11,17 +11,17 @@ import java.time.LocalDate;
 @EqualsAndHashCode
 @Entity
 public class Command {
-    public enum CommandType{Traited, Waiting,Cancelled, NotFinishedYet}
+    public enum CommandState{Traited, Waiting,Cancelled, NotFinishedYet}
     @EmbeddedId
-    private CommandId id;
+    private CommandId id; //id1=(P1,C1)   id2=(P1,C2) id3=(P2,C1)
     private LocalDate date;
     @Enumerated(EnumType.STRING)
-    private CommandType state;
-    @ManyToOne(fetch=FetchType.LAZY)
-    @MapsId("idProduct")
-    private Product prod;
+    private CommandState state;
+    private int quantity;
     @ManyToOne
     @MapsId("idCustomer")
-    private Customer custm;
-
+    private Customer cust;
+    @ManyToOne
+    @MapsId("idProduct")
+    private Product prod;
 }

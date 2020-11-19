@@ -19,7 +19,6 @@ public class Customer {
     private Long id;
     @NonNull
     private String name;
-    @OneToMany(mappedBy = "custm",cascade=CascadeType.ALL)
-    private Set<Command> commandes=new HashSet<>();
-
+    @OneToMany(mappedBy="cust")
+    private Set<Command> commands=new HashSet<>();
 }
