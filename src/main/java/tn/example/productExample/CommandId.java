@@ -19,4 +19,6 @@ public class CommandId implements Serializable {
     private Long idCustomer;
 }
 
+//Student st=new Student();-->créé dans la memoire centrale
+
 //Student st=new Student();--->st sera créé dans La RAM

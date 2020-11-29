@@ -21,4 +21,5 @@ public class Customer {
     private String name;
     @OneToMany(mappedBy="cust")
     private Set<Command> commands=new HashSet<>();
+
 }

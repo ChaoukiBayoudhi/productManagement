@@ -19,9 +19,19 @@ public class Command {
     private CommandState state;
     private int quantity;
     @ManyToOne
-    @MapsId("idCustomer")
+    @MapsId("idProduct")
     private Customer cust;
     @ManyToOne
-    @MapsId("idProduct")
+    @MapsId("idCustomer")
     private Product prod;
+
+    public Command(CommandId id) {
+        this.id = id;
+    }
+
+    public Command(CommandId id, CommandState state, int quantity) {
+        this.id = id;
+        this.state = state;
+        this.quantity = quantity;
+    }
 }
